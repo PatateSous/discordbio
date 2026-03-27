@@ -163,6 +163,11 @@
         <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj6FxeHdnpZEJBbqA27RD3ifP4XkYx3XrtpnIZNKidD-qi1xpoterJIUrSdQDq-AQRDc92gfg49OjRQdyMYcKZYQiHF7kukzPtzGVnG9LoQIqXu6DZcIiLF6Tc_1fQPN1599qeTZLfXanjctmq85kvjG3w-9ZqMmuJiRnJsTE80lvtrmtssIBHf9NYOUa3X=s16000" alt="My image" style="width:100%; max-width:400px; border-radius:12px;">
       </div>
 
+      <div style="text-align:center; margin-top:70px; font-size:22px; color:var(--muted); max-width:700px; margin-left:auto; margin-right:auto;">
+        <div style="font-size:28px; color:var(--accent1); margin-bottom:20px; font-weight:600;" id="sorted-title">— sorted by date —</div>
+        <div id="sorted-content"></div>
+      </div>
+
       <div style="text-align:center; margin-top:70px; font-size:35px;" id="ending-text">
         ユキミ、永遠に愛し恋してる。<3
       </div>
@@ -184,6 +189,13 @@
       linkAkatsuki: "My akatsuki profile (osu!rx)",
       linkLeetify: "My leetify profile!",
       linkCs: "My csstats.gg profile!",
+      sortedTitle: "— New things (sorted by date) —",
+      sortedContent: `
+        <div style="margin-bottom:18px;">
+          <span style="color:var(--accent2); font-size:18px;">March 2026</span><br>
+          Got into <a href="https://open.spotify.com/playlist/2bNy8f4bBWQx9pd5M1Mf4O?si=b1a3f5c1e4f34c67">breakcore</a> and absolutely fell in love with it. Especially <a href="https://open.spotify.com/artist/7AIly84PlfudU4QitTn8y4?si=1580be9435bd4d82">hkmori</a> stuff, or <a href="https://open.spotify.com/artist/5k0oBNr9sJYxH36FQHkHzB?si=sPOfyUcZQJmpxIYAxY0n2g">633397</a>
+        </div>
+      `,
       fullAbout: `
         <p style="margin-top: 20px; font-size: 25px; color: var(--muted);">
           Hey! I'm a 16 year old dumbass girl that's just happy you're reading this. I'm really open to friending people, as long as they're not weirded out by being freaky, or just not the bad kind of freaky, what i mean is that i don't need pedophiles on my friend list, but if you're a normal human being looking for friends, and you play games like CS2, Roblox, Osu!, stuff like that, present yourself really simply and i'll probably accept you!
@@ -245,6 +257,13 @@
       linkAkatsuki: "Mon profil akatsuki (osu!rx)",
       linkLeetify: "Mon profil leetify !",
       linkCs: "Mon profil csstats.gg !",
+      sortedTitle: "— Nouvelles choses (par date) —",
+      sortedContent: `
+        <div style="margin-bottom:18px;">
+          <span style="color:var(--accent2); font-size:18px;">Mars 2026</span><br>
+          Je me suis intéressée au <a href="https://open.spotify.com/playlist/2bNy8f4bBWQx9pd5M1Mf4O?si=b1a3f5c1e4f34c67">breakcore</a> et j'adore ça maintenant. En particulier des artistes comme <a href="https://open.spotify.com/artist/7AIly84PlfudU4QitTn8y4?si=1580be9435bd4d82">hkmori</a>, ou <a href="https://open.spotify.com/artist/5k0oBNr9sJYxH36FQHkHzB?si=sPOfyUcZQJmpxIYAxY0n2g">633397</a>
+        </div>
+      `,
       fullAbout: `
         <p style="margin-top: 20px; font-size: 25px; color: var(--muted);">
           Salut ! Je suis une fille de 16 ans complètement conne qui est juste contente que tu lises ça. Je suis vraiment ouverte à ajouter des gens en amis, tant qu'ils sont pas gênés par le fait d'être freaky, ou juste pas le mauvais genre de freaky, ce que je veux dire c'est que j'ai pas besoin de pédophiles dans ma liste d'amis, mais si t'es un être humain normal qui cherche des amis, et que tu joues à des jeux comme CS2, Roblox, Osu!, des trucs comme ça, présente-toi vraiment simplement et je t'accepterai probablement !
@@ -309,6 +328,8 @@
     document.getElementById('link-akatsuki').innerText = t.linkAkatsuki;
     document.getElementById('link-leetify').innerText = t.linkLeetify;
     document.getElementById('link-cs').innerText = t.linkCs;
+    document.getElementById('sorted-title').innerText = t.sortedTitle;
+    document.getElementById('sorted-content').innerHTML = t.sortedContent;
     document.getElementById('about-content').innerHTML = isTldr ? t.shortAbout : t.fullAbout;
     document.getElementById('lang-btn').innerText = currentLang === 'en' ? 'Traduire en français' : 'Translate to English';
     document.getElementById('tldr-btn').innerText = isTldr ? (currentLang === 'en' ? 'Full version' : 'Version complète') : 'TL;DR';
